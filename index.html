@@ -4,21 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
+      <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>QR Code Generator</h1>
-    <div class="container">
-        <center>
-            <p>Enter URL or Text</p>
-            <div><input type="text" placeholder=" Enter URL or Text here:" id="qrText"></div>
-            <button onclick="generateQR()">Generate QR Code</button>
-            <div id="imgBox">
-                <img src="" alt="&nbsp" id="qrImage">
-            </div>
-        </center>
-    </div>
+  <!-- Dark Mode Toggle Button -->
+  <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+
+  <!-- Red Alert Popup -->
+  <div id="alertPopup"></div>
+
+  <h1>QR Code Generator</h1>
+  
+  <div class="container">
+    <center>
+      <p>Enter URL or Text</p>
+      <div>
+        <input type="text" placeholder=" Enter URL or Text here:" id="qrText">
+      </div>
+      <button onclick="generateQR()">Generate QR Code</button>
+      <!-- Added Download Button -->
+      <button onclick="downloadQR()">Download QR Code</button>
+      <div id="imgBox">
+        <img src="" id="qrImage">
+      </div>
+    </center>
+  </div>
+
+  <div class="footer">Made with 💙 by <a href="https://destiny-timothy.vercel.app/">Destiny Timothy</a></div>
 
     <script src="script.js"></script>
     
